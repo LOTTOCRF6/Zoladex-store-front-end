@@ -1,60 +1,63 @@
-$(function(){
-    $('.carousel-item').eq(0).addClass('active');
-    var total = $('.carousel-item').length;
-    var current = 0;
-    $('#moveRight').on('click', function(){
-      var next=current;
-      current= current+1;
-      setSlide(next, current);
-    });
-    $('#moveLeft').on('click', function(){
-      var prev=current;
-      current = current- 1;
-      setSlide(prev, current);
-    });
-    function setSlide(prev, next){
-      var slide= current;
-      if(next>total-1){
-       slide=0;
-        current=0;
+////////////////////////////////////
+// NAVIGATION SHOW/HIDE
+
+$("nav ul").hide();
+
+$(".nav-toggle").click( function() {
+  $("nav ul").slideToggle("medium");
+});
+
+$("nav ul li a, .brand a").click( function() {
+  $("nav ul").hide();
+});
+
+////////////////////////////////////
+// SMOOTH SCROLLING WITH NAV HEIGHT OFFSET
+
+$(function() {
+  var navHeight = $("nav").outerHeight();
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - navHeight
+        }, 1000);
+        return false;
       }
-      if(next<0){
-        slide=total - 1;
-        current=total - 1;
-      }
-             $('.carousel-item').eq(prev).removeClass('active');
-             $('.carousel-item').eq(slide).addClass('active');
-        setTimeout(function(){
-  
-        },800);
-  
-  
-  
-      console.log('current '+current);
-      console.log('prev '+prev);
     }
   });
-  (function($) { // Begin jQuery
-    $(function() { // DOM ready
-      // If a link has a dropdown, add sub menu toggle.
-      $('nav ul li a:not(:only-child)').click(function(e) {
-        $(this).siblings('.nav-dropdown').toggle();
-        // Close one dropdown when selecting another
-        $('.nav-dropdown').not($(this).siblings()).hide();
-        e.stopPropagation();
-      });
-      // Clicking away from dropdown will remove the dropdown class
-      $('html').click(function() {
-        $('.nav-dropdown').hide();
-      });
-      // Toggle open and close nav styles on click
-      $('#nav-toggle').click(function() {
-        $('nav ul').slideToggle();
-      });
-      // Hamburger to X toggle
-      $('#nav-toggle').on('click', function() {
-        this.classList.toggle('active');
-      });
-    }); // end DOM ready
-  })(jQuery); // end jQuery
-  
+});
+
+////////////////////////////////////
+// NAVIGATION STICKY
+
+var viewHeight = $(window).height();
+var navigation = $('nav');
+
+$(window).scroll( function() {
+  if ( $(window).scrollTop() > (viewHeight - 175) ) { //edit for nav height
+    navigation.addClass('sticky');
+  } else {
+    navigation.removeClass('sticky');
+  }
+});
+
+////////////////////////////////////////////////
+// MAKE THE SPLASH CONTAINER VERTICALLY CENTERED
+
+function centerSplash() {
+  var navHeight = $("nav").outerHeight();
+  var splashHeight = $(".splash .container").height();
+  var remainingHeight = $(window).height() - splashHeight - navHeight;
+  $(".splash .container").css({"padding-top" : remainingHeight/2, "padding-bottom" : remainingHeight/2});
+}
+
+$( document ).ready( function() {
+  centerSplash();
+});
+
+$( window ).resize( function() {
+  centerSplash();
+});
