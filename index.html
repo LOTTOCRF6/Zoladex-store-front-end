@@ -33,14 +33,14 @@
   
   <div class="container-fluid splash" id="splash">
     <div class="container">
-      <img src="https://s10.postimg.org/jvo3z5kux/QTr_B8o_S.jpg" alt="Portrait of Mr. Roboto" class="profile-image">
-      <h1>Mr. Roboto</h1>
-      <span class="lead">Android Life Form</span>
+      <!-- <img src="https://s10.postimg.org/jvo3z5kux/QTr_B8o_S.jpg" alt="Portrait of Mr. Roboto" class="profile-image"> -->
+      <h1>ZOLADEX CLOTHING</h1>
+      <span class="lead">Best store in local stores</span>
       <span class="continue"><a href="#about"><i class="fa fa-angle-down"></i></a></span>
     </div>
   </div>
   
-  <div class="container-fluid intro" id="about">
+  <!-- <div class="container-fluid intro" id="about">
     <div class="container">
       <h2>About Me</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ratione impedit soluta amet quas saepe temporibus <a href="#">eum reprehenderit</a> voluptas! A nihil adipisci itaque quos quo dolorum consequuntur iusto facere quaerat, excepturi quod, necessitatibus aliquid quae est qui, aut in assumenda animi tempora debitis. Beatae, veritatis, delectus. Repellat dolore, molestias nam.</p>
@@ -66,26 +66,39 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda modi maiores eum commodi soluta, blanditiis voluptates ea eos, cim! Neque.</p>
       </div>
     </div>
-  </div>
+  </div> -->
   
   <div class="container-fluid portfolio" id="portfolio">
     <div class="container cf">
-      <h2>Portfolio</h2>
+      <h2>OUR PRODUCTS</h2>
       <div class="gallery">
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=250" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=249" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=248" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=247" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=239" alt=""></div>
-        <div class="gallery-image"><img src="https://unsplash.it/800/450?image=238" alt=""></div>
+        <div class="gallery-image"><img src="https://bit.ly/3gPmimj" alt=""></div>
+        <div class="gallery-image"><img src="https://bit.ly/3BpP70o" alt=""></div>
+        <div class="gallery-image"><img src="https://bit.ly/3zCYWIc" alt=""></div>
+        <div class="gallery-image"><img src="https://bit.ly/2WD0hji" alt=""></div>
+        <div class="gallery-image"><img src="https://bit.ly/3DuqVfj" alt=""></div>
+        <div class="gallery-image"><img src="https://bit.ly/3mNLnlm" alt=""></div>
       </div>
     </div>
   </div>
+
+  <div id="filters">
+    <form onsubmit="event.preventDefault(),searchProducts()">
+      <input type="text" required id="searchTerm" />
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  <div id="products-container">
+    <div class="container"></div>
+  </div>   
+  <!-- cart -->
+  <div id="cart"><p>You have no items in the cart</p></div>
+  <button onclick="toggleCart()" id="cart-button">Cart</button>
   
   <div class="container-fluid contact" id="contact">
     <div class="container">
       <form>
-        <h2>Contact Me</h2>
+        <h2>Contact Us</h2>
         <input type="text" placeholder="Name" id="name" name="name" class="full-half">
         <input type="email" placeholder="Email" id="email" name="email" class="full-half">
         <input type="text" placeholder="Subject" id="subject" name="subject">
@@ -104,10 +117,10 @@
       <a href="#" target="_blank"><i class="fa fa-codepen"></i></a>
     </div>
   </footer>
-    <footer>
+    <!-- <footer>
     
           <div class="copyright">
-            <p>&copy 2018 - JuztDevloper</p>
+            <p>&copy 2021 - ZOLADEX CLOTHING</p>
           </div>
           <div class="social">
             <a href="#" class="support">Contact Us</a>
@@ -116,6 +129,6 @@
             <a href="#" class="linked">in</a>
           </div>
     
-      </footer>
+      </footer> -->
 </body>
 </html>
