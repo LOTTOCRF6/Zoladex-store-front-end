@@ -87,22 +87,22 @@ function renderCart(cartItems) {
   }
 }
 
-function addToCart(id) {
+function addToCart(product_id) {
   console.log(products.data);
   let product = products.data.find((item) => {
-    return item.id == id;
+    return item.product_id == product_id;
   });
   cart.push(product);
   renderCart(cart);
 }
 function removeItem(id) {
   let product = products.data.find((item) => {
-    return item.id == id;
+    return item.product_id == product_id;
   });
   //console.log(product);
 
   cart.splice(
-    cart.findIndex((a) => a.id === product.id),
+    cart.findIndex((a) => a.product_id === product.product_id),
     1
   );
   renderCart(cart);
