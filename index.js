@@ -19,9 +19,11 @@ function make_products(products) {
         <div class = "products">
             <img src="${product.image}" class = "product-image"> 
             <h4 class = "product-title"> ${product.product_tittle}</h4>
-            <p class = "product-description"> ${product.brand_name}</p>
+            <p class = "product-brand_name"> ${product.brand_name}</p>
+            <p class = "product-size"> ${product.size}</p>
+            <p class = "product-colour"> ${product.colour}</p>
             <p class = "product-description"> ${product.description}</p>
-            <p class = "product-price">${product.price} </p>
+            <p class = "product-price">R ${product.price} </p>
             <button onclick="addToCart(${product.product_id})">Add to Cart</button>
             
         </div>
