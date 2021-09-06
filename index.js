@@ -97,7 +97,7 @@ function addToCart(product_id) {
   cart.push(product);
   renderCart(cart);
 }
-function removeItem(id) {
+function removeItem(product_id) {
   let product = products.data.find((item) => {
     return item.product_id == product_id;
   });
@@ -108,6 +108,39 @@ function removeItem(id) {
     1
   );
   renderCart(cart);
+}
+
+// Contact 
+mystorage = window.localStorage;
+function contactUs() {
+  const contactMessage = {
+    fullname: document.getElementById("fullname").value,
+    email: document.getElementById("email").value,
+    regarding: document.getElementById("regarding").value,
+    order_no: document.getElementById("order_no").value,
+    questions: document.getElementById("questions").value,
+    message: document.getElementById("message").value,
+  }
+
+  console.log(contactMessage)
+  fetch("https://ancient-lowlands-29535.herokuapp.com/contact-us/", {
+    method: "POST",
+    body: JSON.stringify(contactMessage),
+    headers: {
+      "Content-type": "application/json",
+      'mode': 'no-cors',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data["message"] == "success") {
+        alert("Thanks for Contacting Zoladex Clothing");
+        window.location.href = "./user_login";
+      } else {
+        alert("Please enter correct information");
+      }
+    });
 }
 
 $("nav ul").hide();

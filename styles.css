@@ -1,9 +1,3 @@
-/* https://coolors.co/2c3e50-e74c3c-ffffff-3498db-95a3b3 */
-
-/* ========================
-Utilities
-======================== */
-
 * {
   box-sizing: border-box;
 }
@@ -26,9 +20,6 @@ img {
   max-width: 100%;
 }
 
-/* ========================
-Global
-======================== */
 
 body {
   color: #444;
@@ -57,9 +48,6 @@ a, a:hover, a:focus, a:active, a:visited {
   text-decoration: underline;
 }
 
-/* ========================
-Containers
-======================== */
 
 .container-fluid {
   padding: 0 1em;
@@ -70,9 +58,6 @@ Containers
   max-width: 996px;
 }
 
-/* ========================
-Navigation
-======================== */
 
 @keyframes show-header {
     0% {
@@ -145,11 +130,6 @@ nav.sticky {
   top: 0;
   width: 100%;
 }
-
-
-/* ========================
-Sections
-======================== */
 
 .splash {
   background: linear-gradient(rgba(44, 62, 80, 0.65), rgba(52, 152, 219, 0.65)),

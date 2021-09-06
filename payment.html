@@ -14,10 +14,11 @@
             <div class="card-logo"></div>
             <div class="card-options">
                 <form class="card-details">
-                    <input class="cc-name" placeholder="Card Holder" required>
-                    <input class="cc-number" placeholder="Card Number" data-numeric required>
-                    <input class="cc-expiry inline" placeholder="Expiry Date" required>
-                    <input class="cc-cvc" placeholder="CVC" data-numeric required>
+                    <input class="cc-name" placeholder="Card Holder" type="cardholder_name" required>
+                    <input class="cc-number" placeholder="Card Number"  type="card_number" data-numeric required>
+                    <input class="cc-expiry inline" placeholder="Expiry Date" type="order_no" required>
+                    <input class="cc-expiry inline" placeholder="payment_method" type="payment_method" required>
+                    <input class="cc-cvc" placeholder="CVV" type="cvv" data-numeric required>
                     <button class="button button-scan">Buy</button>
                 </form>
             </div>

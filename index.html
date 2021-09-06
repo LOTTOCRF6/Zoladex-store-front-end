@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="W/img/icon.png" />
     <title>Zoladex Store</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:300:italic" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Text" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
     <link rel="stylesheet" href="styles.css">
     <script src="index.js"></script>
 </head>
@@ -99,12 +93,13 @@
     <div class="container">
       <form>
         <h2>Contact Us</h2>
-        <input type="text" placeholder="Fullname" id="name" name="name" class="full-half">
+        <input type="text" placeholder="Fullname" id="fullname" name="name" class="full-half">
         <input type="email" placeholder="Email" id="email" name="email" class="full-half">
-        <input type="text" placeholder="Subject" id="subject" name="subject">
-        <input type="text" placeholder="Order no" id="subject" name="subject">
+        <input type="text" placeholder="Subject" id="regarding" name="regarding">
+        <input type="text" placeholder="Order no" id="order_no" name="order_no">
+        <input type="text" placeholder="Question" id="questions" name="questions">
         <textarea placeholder="Message" id="message" name="message"></textarea>
-        <input type="submit" value="Send">
+        <input type="submit" onclick="event.preventDefault(), contactUs()" value="Send">
       </form>
     </div>
   </div>
@@ -125,7 +120,7 @@
       <ul>
         <li>Orders</li>
         <li>Cart</li>
-        <li>Payment</li>
+        <li><a href="./payment.html">Payment</a></li>
         <li>Shipment</li>
       </ul>
     </div>
