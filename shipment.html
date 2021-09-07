@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shipment.css">
+    <script src="./shipment.js"></script>
+</head>
+<body>
+    <form id="myform">
+        <header>ZOLADEX CLOTHING Shipment Form</header>
+        <div class="area">
+          <div class="row">
+            <div class="col2">
+              <input type="text" name="firstname">
+              <label for="fistname">Fullname</label>
+            </div>
+            <div class="col2">
+              <input type="text" name="lastname">
+              <label for="Order No">Order No</label>
+            </div>
+          </div>
+          <div class="row">
+            <input type="text" name="phone" id="phone">
+            <label for="phone">Brand</label>
+          </div>
+          <div class="row">
+            <input type="text" name="address" id="address">
+            <label for="address">Address</label>
+          </div>
+          <div class="row">
+            <div class="col2">
+              <input type="text" name="newfirstname">
+              <label for="newfistname">City</label>
+            </div>
+            <div class="col2">
+              <input type="text" name="newlastname">
+              <label for="newlastname">Country</label>
+            </div>
+          </div>
+          <div class="row">
+            <input type="text" name="newaddress" id="newaddress">
+            <label for="newaddress">Province</label>
+          </div>
+          <div class="row">
+            <div class="col2">
+              <input type="text" name="newfirstname">
+              <label for="newfistname">Postal Code</label>
+            </div>
+            <div class="col2">
+              <input type="text" name="newlastname">
+              <label for="newlastname">Phone</label>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="area">
+          <div class="ckeckarea">
+            <input type="checkbox" name="checkbox1" id="checkbox1" onclick="autofilling(this.form)">
+            <label for="checkbox1">Check this box if order info and sending info are the same.</label>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit" class="btn">
+            <input type="submit" value="cancel" class="btn">
+          </div>
+
+      </form>
+</body>
+</html>

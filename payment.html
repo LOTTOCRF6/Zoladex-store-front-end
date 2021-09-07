@@ -7,25 +7,58 @@
     <title>Payment</title>
     <link rel="stylesheet" href="payment.css">
     <script src="payment.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
 </head>
 <body>
-    <div class="container">
-        <div class="card-checkout">
-            <div class="card-logo"></div>
-            <div class="card-options">
-                <form class="card-details">
-                    <input class="cc-name" placeholder="Card Holder" type="cardholder_name" required>
-                    <input class="cc-number" placeholder="Card Number"  type="card_number" data-numeric required>
-                    <input class="cc-expiry inline" placeholder="Expiry Date" type="order_no" required>
-                    <input class="cc-expiry inline" placeholder="payment_method" type="payment_method" required>
-                    <input class="cc-cvc" placeholder="CVV" type="cvv" data-numeric required>
-                    <button class="button button-scan">Buy</button>
-                </form>
+
+    <div class="wrapper">
+        <div class="payment">
+          <div class="payment-logo">
+            <p>z</p>
+          </div>
+          
+          
+          <h2>Pay Zoladex</h2>
+          <div class="form">
+            <div class="card space icon-relative">
+              <label class="label">Card holder:</label>
+              <input type="TEXT"class="input"   id="cardholder_name" placeholder="Card holder">
+              <i class="fas fa-user"></i>
             </div>
-            <div class="card-confirm">
-                <button class="button button-confirm">Complete Order</button>
+            <div class="card space icon-relative">
+              <label class="label">Card number:</label>
+              <input type="number" id="card_number" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number">
+              <i class="far fa-credit-card"></i>
             </div>
+            <div class="card space icon-relative">
+                <label class="label">Order No:</label>
+                <input type="number" id="order_no" class="input" data-mask="0000 0000 0000 0000" placeholder="Order No">
+                <i class="far fa-credit-card"></i>
+              </div>
+            <div class="card-grp space">
+              <div class="card-item icon-relative">
+                <label class="label">Expiry date:</label>
+                <input type="text" id="end_date" class="input"  placeholder="00 / 00">
+                <i class="far fa-calendar-alt"></i>
+              </div>
+              <div class="card-item icon-relative">
+                <label class="label">CVv:</label>
+                <input type="text" id="cvv" class="input" data-mask="000" placeholder="000">
+                <i class="fas fa-lock"></i>
+              </div>
+            </div>
+            <div class="card space icon-relative">
+                <label class="label">Payment Method:</label>
+                <input type="text" id="payment_method" class="input" data-mask="0000 0000 0000 0000" placeholder="Payment Method">
+                <i class="far fa-credit-card"></i>
+              </div>
+              
+            <div class="btn" onclick="event.preventDefault(), payment()">
+              Pay
+            </div> 
+            
+          </div>
         </div>
-    </div>
+      </div>
 </body>
 </html>

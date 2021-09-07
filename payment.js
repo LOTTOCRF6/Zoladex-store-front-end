@@ -1,19 +1,19 @@
 // Payment 
 mystorage = window.localStorage;
 function payment() {
-  const contactMessage = {
+  const payment = {
     cardholder_name: document.getElementById("cardholder_name").value,
-    email: document.getElementById("email").value,
-    regarding: document.getElementById("regarding").value,
+    card_number: document.getElementById("card_number").value,
     order_no: document.getElementById("order_no").value,
-    questions: document.getElementById("questions").value,
-    message: document.getElementById("message").value,
+    end_date: document.getElementById("end_date").value,
+    cvv: document.getElementById("cvv").value,
+    payment_method: document.getElementById("payment_method").value,
   }
 
-  console.log(contactMessage)
+  console.log(payment)
   fetch("https://ancient-lowlands-29535.herokuapp.com/payment/", {
     method: "POST",
-    body: JSON.stringify(contactMessage),
+    body: JSON.stringify(payment),
     headers: {
       "Content-type": "application/json",
       'mode': 'no-cors',
@@ -23,7 +23,7 @@ function payment() {
     .then((data) => {
       console.log(data);
       if (data["message"] == "success") {
-        alert("Thanks for Contacting Zoladex Clothing");
+        alert("Your Payment was Successfully");
         window.location.href = "./user_login";
       } else {
         alert("Please enter correct information");
@@ -31,43 +31,4 @@ function payment() {
     });
 }
 
-(function() {
-    var ccName = $('input.cc-name'),
-        ccNumber = $('input.cc-number'),
-        ccExpiry = $('input.cc-expiry'),
-        ccCVC = $('input.cc-cvc');
-    
-    $('[data-numeric]').payment('restrictNumeric');
-    
-    ccNumber.payment('formatCardNumber');
-    ccExpiry.payment('formatCardExpiry');
-    ccCVC.payment('formatCardCVC');
-    
-    ccName.on('focus', function() {
-        $(this).data('placeholder', $(this).attr('placeholder'))
-        $(this).attr('placeholder', 'Name Surname');
-    }).blur(function() {
-        $(this).attr('placeholder', $(this).data('placeholder'))
-    });
-    
-    ccNumber.on('focus', function() {
-        $(this).data('placeholder', $(this).attr('placeholder'))
-        $(this).attr('placeholder', 'xxxx xxxx xxxx xxxx');
-    }).blur(function() {
-        $(this).attr('placeholder', $(this).data('placeholder'))
-    });
-    
-    ccExpiry.on('focus', function() {
-        $(this).data('placeholder', $(this).attr('placeholder'))
-        $(this).attr('placeholder', 'MM/YYYY');
-    }).blur(function() {
-        $(this).attr('placeholder', $(this).data('placeholder'))
-    });
-    
-    ccCVC.on('focus', function() {
-        $(this).data('placeholder', $(this).attr('placeholder'))
-        $(this).attr('placeholder', 'xxxx');
-    }).blur(function() {
-        $(this).attr('placeholder', $(this).data('placeholder'))
-    });
-})();
+$("input[name='expiry-data']").mask("00 / 00");

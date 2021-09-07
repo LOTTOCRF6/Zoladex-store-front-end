@@ -13,7 +13,7 @@ function userRegister() {
     }),
     headers: {
       "Content-type": "application/json",
-      Authorization: `jwt ${mystorage.getItem("jwt-token")}`,
+      // Authorization: `jwt ${mystorage.getItem("jwt-token")}`,
     },
   })
     .then((response) => response.json())
