@@ -11,7 +11,7 @@ function payment() {
   }
 
   console.log(payment)
-  fetch("https://ancient-lowlands-29535.herokuapp.com/payment/", {
+  fetch(" https://ancient-lowlands-29535.herokuapp.com/payment/", {
     method: "POST",
     body: JSON.stringify(payment),
     headers: {
@@ -24,7 +24,7 @@ function payment() {
       console.log(data);
       if (data["message"] == "success") {
         alert("Your Payment was Successfully");
-        window.location.href = "./user_login";
+        window.location.href = "./index.html";
       } else {
         alert("Please enter correct information");
       }

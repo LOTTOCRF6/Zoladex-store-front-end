@@ -6,10 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./index.js"></script>
     <script src="payment.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
 </head>
 <body>
+  <nav class="container-fluid nav">
+    <div class="container cf">
+      <div class="brand">
+        <a href="#splash">ZOLADEX</a>
+      </div>
+      <i class="fa fa-bars nav-toggle"></i>
+      <ul>
+        <li>
+          <div class="dropdown">
+          <button class="dropbtn">My Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./login.html">Login</a>
+            <a href="./user-register.html">Register</a>
+          </div></li>
+        <!-- <li><a href="#skills">Cart</a></li> -->
+        <li><a href="./">Checkout</a></li>
+        <li><a href="./index.html">Contact US</a></li>
+      </ul>
+    </div>
+  </nav>
 
     <div class="wrapper">
         <div class="payment">
@@ -33,7 +58,6 @@
             <div class="card space icon-relative">
                 <label class="label">Order No:</label>
                 <input type="number" id="order_no" class="input" data-mask="0000 0000 0000 0000" placeholder="Order No">
-                <i class="far fa-credit-card"></i>
               </div>
             <div class="card-grp space">
               <div class="card-item icon-relative">
@@ -42,7 +66,7 @@
                 <i class="far fa-calendar-alt"></i>
               </div>
               <div class="card-item icon-relative">
-                <label class="label">CVv:</label>
+                <label class="label">CVV:</label>
                 <input type="text" id="cvv" class="input" data-mask="000" placeholder="000">
                 <i class="fas fa-lock"></i>
               </div>
@@ -50,8 +74,9 @@
             <div class="card space icon-relative">
                 <label class="label">Payment Method:</label>
                 <input type="text" id="payment_method" class="input" data-mask="0000 0000 0000 0000" placeholder="Payment Method">
-                <i class="far fa-credit-card"></i>
-              </div>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+              </div>  
               
             <div class="btn" onclick="event.preventDefault(), payment()">
               Pay

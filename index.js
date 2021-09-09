@@ -25,6 +25,7 @@ function make_products(products) {
             <p class = "product-description"> ${product.description}</p>
             <p class = "product-price">R ${product.price} </p>
             <button onclick="addToCart(${product.product_id})">Add to Cart</button>
+            <button onclick="addToCart(${product.product_id})">Buy</button>
             
         </div>
     `;
@@ -49,7 +50,7 @@ function searchProducts() {
             <img src="${product.image}" class = "image"> 
             <h4 class = "product-title"> ${product.product_tittle}</h4>
             <p class = "product-description"> ${product.description}</p>
-            <p class = "product-price">${product.price} </p>
+            <p class = "product-price">R${product.price} </p>
             <button onclick="addToCart(${product.product_id})">Add to Cart</button>
             
         </div>
@@ -73,7 +74,7 @@ function renderCart(cartItems) {
             <div class = "product-content"> 
                 <h4 class = "product-title"> ${cartItem.product_tittle}</h4>
                 <p class = "product-description"> ${cartItem.description}</p>
-                <p class = "product-price">${cartItem.price} </p>
+                <p class = "product-price">R ${cartItem.price} </p>
                 <button class ="revome_cart" onclick="removeItem(${cartItem.product_id})">Remove item</button>
             </div>
             
@@ -83,7 +84,7 @@ function renderCart(cartItems) {
       `;
     });
     let totalPrice = cartItems.reduce((total, item) => total + item.price,0);
-    cartContainer.innerHTML += `<h3> Total is: ${totalPrice} </h3>`;
+    cartContainer.innerHTML += `<h3> Total is: R ${totalPrice} </h3>`;
   } else {
     cartContainer.innerHTML = "<h2> No items in cart</h2>";
   }
@@ -95,7 +96,7 @@ function addToCart(product_id) {
     return item.product_id == product_id;
   });
   cart.push(product);
-  renderCart(cart);
+  localStorage.setItem("cart",JSON.stringify(cart));
 }
 function removeItem(product_id) {
   let product = products.data.find((item) => {

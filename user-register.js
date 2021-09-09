@@ -21,7 +21,7 @@ function userRegister() {
       console.log(data);
       if (data["message"] == "success") {
         alert("Registered successfully, please log in.");
-        window.location.href = "./user_login";
+        window.location.href = "./login.html";
       } else {
         alert("Please enter correct information");
       }

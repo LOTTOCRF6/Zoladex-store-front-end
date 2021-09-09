@@ -14,55 +14,55 @@
         <div class="area">
           <div class="row">
             <div class="col2">
-              <input type="text" name="firstname">
+              <input type="text" name="firstname" id="buyers_fullname">
               <label for="fistname">Fullname</label>
             </div>
             <div class="col2">
-              <input type="text" name="lastname">
+              <input type="text" name="lastname" id="order_no">
               <label for="Order No">Order No</label>
             </div>
           </div>
           <div class="row">
-            <input type="text" name="phone" id="phone">
+            <input type="text" name="phone" id="brand">
             <label for="phone">Brand</label>
           </div>
           <div class="row">
-            <input type="text" name="address" id="address">
+            <input type="text" name="address" id="buyers_address">
             <label for="address">Address</label>
           </div>
           <div class="row">
             <div class="col2">
-              <input type="text" name="newfirstname">
+              <input type="text" name="newfirstname" id="city">
               <label for="newfistname">City</label>
             </div>
             <div class="col2">
-              <input type="text" name="newlastname">
+              <input type="text" name="newlastname" id="country">
               <label for="newlastname">Country</label>
             </div>
           </div>
           <div class="row">
-            <input type="text" name="newaddress" id="newaddress">
+            <input type="text" name="newaddress" id="province">
             <label for="newaddress">Province</label>
           </div>
           <div class="row">
             <div class="col2">
-              <input type="text" name="newfirstname">
+              <input type="text" name="newfirstname" id="postal_code">
               <label for="newfistname">Postal Code</label>
             </div>
             <div class="col2">
-              <input type="text" name="newlastname">
+              <input type="text" name="newlastname" id="recipient_phone">
               <label for="newlastname">Phone</label>
             </div>
           </div>
         </div>
         </div>
         <div class="area">
-          <div class="ckeckarea">
+          <!-- <div class="ckeckarea">
             <input type="checkbox" name="checkbox1" id="checkbox1" onclick="autofilling(this.form)">
             <label for="checkbox1">Check this box if order info and sending info are the same.</label>
-          </div>
+          </div> -->
           <div class="row">
-            <input type="submit" value="Submit" class="btn">
+            <input type="submit" onclick="event.preventDefault(), shipment()" value="Submit" class="btn">
             <input type="submit" value="cancel" class="btn">
           </div>
 
