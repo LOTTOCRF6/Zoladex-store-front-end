@@ -94,7 +94,7 @@ function addToCart(product_id) {
     return item.product_id == product_id;
   });
   cart.push(product);
-  renderCart(cart)
+  
   localStorage.setItem("cart",JSON.stringify(cart));
 }
 function removeItem(product_id) {

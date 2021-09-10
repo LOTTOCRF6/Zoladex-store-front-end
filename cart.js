@@ -9,10 +9,11 @@ function renderCart(cartItems) {
         <div class = "products">
               <img src="${cartItem.image}" class = "image">
               <div class = "product-content"> 
+                  <h5 class = "product_id"> ${cartItem.product_id}</h5>
                   <h4 class = "product-title"> ${cartItem.product_tittle}</h4>
-                  <p class = "product-brand_name"> ${product.brand_name}</p>
-                  <p class = "product-size"> ${product.size}</p>
-                  <p class = "product-colour"> ${product.colour}</p>                  
+                  <p class = "product-brand_name"> ${cartItem.brand_name}</p>
+                  <p class = "product-size"> ${cartItem.size}</p>
+                  <p class = "product-colour"> ${cartItem.colour}</p>                  
                   <p class = "product-description"> ${cartItem.description}</p>
                   <p class = "product-price">R ${cartItem.price} </p>
                   <button class ="revome_cart" onclick="removeItem(${cartItem.product_id})">Remove item</button>
@@ -30,6 +31,17 @@ function renderCart(cartItems) {
     }
   }
 
+renderCart(itemsOnCart);
+
+//remove from cart
+function removeItem(product_id) {
+  itemsOnCart = itemsOnCart.filter(item => item.product_id != product_id)
+  console.log(itemsOnCart);
   renderCart(itemsOnCart);
+
+  localStorage.setItem('cart', JSON.stringify(itemsOnCart))
+}
+
+
 
 

@@ -1,10 +1,11 @@
 mystorage = window.localStorage;
 function brandRegister() {
-  fetch("https://ancient-lowlands-29535.herokuapp.com/brand-registration/", {
+  fetch("http://127.0.0.1:5000/brand-registration/", {
     method: "POST",
     body: JSON.stringify({
       ceo_name: document.getElementById("ceo_name").value,
       ceo_surname: document.getElementById("ceo_surname").value,
+      brand_name: document.getElementById("brand_name").value,
       brand_registration_number: document.getElementById("brand_registration_number").value,
       brand_style: document.getElementById("brand_style").value,
       social_media_link: document.getElementById("social_media_link").value,

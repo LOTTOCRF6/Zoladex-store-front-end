@@ -268,7 +268,8 @@ nav.sticky {
   width: 100%;
   bottom: 0;
   z-index: 3;
-  background-color: #626c74;
+  height: 100vh;
+  background-color: #2d7cbd;
   transition: all 0.2s linear;
   display: flex;
   flex-direction: column;
