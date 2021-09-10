@@ -382,7 +382,7 @@ html,body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, Sans-serif;
-  background-color: #e4e3eb;
+  /* background-color: #e4e3eb; */
 }
 .dummy_page {
   height: 200px;

@@ -27,7 +27,7 @@
             <a href="./user-register.html">Register</a>
           </div></li>
         <li><a href="./cart.html">Cart</a></li>
-        <li><a href="#portfolio">Order</a></li>
+        <li><a href="#products-container">Products</a></li>
         <li><a href="#contact">Contact US</a></li>
       </ul>
     </div>
@@ -83,7 +83,7 @@
       </div>
     </div>
   </div>
-
+<!-- Products -->
   <div id="filters">
     <form onsubmit="event.preventDefault(),searchProducts()">
       <input type="text" required id="searchTerm" />
@@ -92,10 +92,11 @@
   </div>
   <div id="products-container">
     <div class="container"></div>
+    <h3>Products</h3>
   </div>   
   <!-- cart -->
   <div id="cart"><p>You have no items in the cart</p></div>
-  <button onclick="toggleCart()" id="cart-button">Cart</button>
+  <!-- <button onclick="toggleCart()" id="cart-button">Cart</button> -->
   
   <div class="container-fluid contact" id="contact">
     <div class="container">

@@ -24,9 +24,7 @@ function make_products(products) {
             <p class = "product-colour"> ${product.colour}</p>
             <p class = "product-description"> ${product.description}</p>
             <p class = "product-price">R ${product.price} </p>
-            <button onclick="addToCart(${product.product_id})">Add to Cart</button>
-            <button onclick="addToCart(${product.product_id})">Buy</button>
-            
+            <button onclick="addToCart(${product.product_id})">Add to Cart</button>            
         </div>
     `;
   });
@@ -96,6 +94,7 @@ function addToCart(product_id) {
     return item.product_id == product_id;
   });
   cart.push(product);
+  renderCart(cart)
   localStorage.setItem("cart",JSON.stringify(cart));
 }
 function removeItem(product_id) {
@@ -137,7 +136,7 @@ function contactUs() {
       console.log(data);
       if (data["message"] == "success") {
         alert("Thanks for Contacting Zoladex Clothing");
-        window.location.href = "./user_login";
+        window.location.href = "./index.html";
       } else {
         alert("Please enter correct information");
       }

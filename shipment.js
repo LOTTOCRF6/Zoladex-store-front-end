@@ -22,7 +22,7 @@ function autofilling(f) {
       buyers_fullname: document.getElementById("buyers_fullname").value,
       order_no: document.getElementById("order_no").value,
       brand: document.getElementById("brand").value,
-      buyers_addres: document.getElementById("buyers_address").value,
+      buyers_address: document.getElementById("buyers_address").value,
       city: document.getElementById("city").value,
       country: document.getElementById("country").value,
       province: document.getElementById("province").value,
@@ -31,7 +31,7 @@ function autofilling(f) {
     }
   
     console.log(shipment)
-    fetch("https://ancient-lowlands-29535.herokuapp.com/shipment/", {
+    fetch("http://127.0.0.1:5000/shipment/", {
       method: "POST",
       body: JSON.stringify(shipment),
       headers: {
