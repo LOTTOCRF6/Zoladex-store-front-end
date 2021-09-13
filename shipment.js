@@ -31,7 +31,7 @@ function autofilling(f) {
     }
   
     console.log(shipment)
-    fetch("http://127.0.0.1:5000/shipment/", {
+    fetch("https://ancient-lowlands-29535.herokuapp.com/shipment/", {
       method: "POST",
       body: JSON.stringify(shipment),
       headers: {

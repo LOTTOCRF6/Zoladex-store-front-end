@@ -24,7 +24,7 @@ function payment() {
       console.log(data);
       if (data["message"] == "success") {
         alert("Your Payment was Successfully");
-        window.location.href = "./index.html";
+        window.location.href = "./shipment.html";
       } else {
         alert("Please enter correct information");
       }
