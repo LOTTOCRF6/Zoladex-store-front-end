@@ -224,6 +224,10 @@ nav.sticky {
   font-size: 4em;
 }
 
+.continue{
+  scroll-behavior: smooth;
+}
+
 .splash .continue a {
   border: 4px solid #fff;
   border-radius: 100%;
