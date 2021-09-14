@@ -288,7 +288,7 @@ nav.sticky {
 }
 
 #cart-button {
-  position: fixed;
+  /* position: fixed;
   right: 5%;
   top: 10%;
   z-index: 10;
@@ -296,7 +296,7 @@ nav.sticky {
   margin-right: -45px;
   color:rgb(42, 165, 165);
   background-color: #0a0d0f;
-  border-radius: 2%;
+  border-radius: 2%; */
 }
 
 #cart.active {

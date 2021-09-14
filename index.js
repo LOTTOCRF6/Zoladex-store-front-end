@@ -24,7 +24,7 @@ function make_products(products) {
             <p class = "product-colour"> ${product.colour}</p>
             <p class = "product-description"> ${product.description}</p>
             <p class = "product-price">R ${product.price} </p>
-            <button onclick="addToCart(${product.product_id})">Add to Cart</button>            
+            <button id = "cart-button" onclick="addToCart(${product.product_id})">Add to Cart</button>            
         </div>
     `;
   });
