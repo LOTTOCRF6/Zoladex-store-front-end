@@ -29,6 +29,28 @@ function make_products(products) {
     `;
   });
 }
+function getUser(){
+  fetch("http://127.0.0.1:5000/get-single-user/"+`${localStorage.getItem("password")}`,{
+    method: "GET",
+    Headers: {
+      "Content-type": "application/json",
+    },
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    // if (data["description"] == "Invalid credentials") {
+    //   alert("invalid cedentials")
+    //   // window.location.href = "./#products-container";
+      
+      
+    // } else {
+      
+    //   // window.location.href ="./#products-container";
+    // }
+  });
+}
+getUser()
 
 // Search
 function searchProducts() {
@@ -108,6 +130,10 @@ function removeItem(product_id) {
     1
   );
   renderCart(cart);
+}
+function logOut(){
+  localStorage.clear()
+  window.location.href = "./index.html";
 }
 
 // Contact 

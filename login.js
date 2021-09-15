@@ -1,4 +1,8 @@
 const user = window.localStorage;
+
+
+
+getUser();
 function login() {
     fetch("https://ancient-lowlands-29535.herokuapp.com/auth", {
       method: "POST",
@@ -15,21 +19,20 @@ function login() {
         console.log(data);
         if (data["description"] == "Invalid credentials") {
           alert("invalid cedentials")
-          window.location.href = "./index.html";
+          // window.location.href = "./#products-container";
           
           
         } else {
           
-          window.location.href ="./index.html";
+          // window.location.href ="./#products-container";
         }
       });
   }
 
   function collect(){
-    var inputUsername= document.getElementById("auth_username");
+    var inputUsername= document.getElementById("username");
      localStorage.setItem("username", inputUsername.value);
-    var inputPassword= document.getElementById("auth_password");
+    var inputPassword= document.getElementById("password");
      localStorage.setItem("password", inputPassword.value);
      
-
   }
