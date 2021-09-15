@@ -351,11 +351,14 @@ nav.sticky {
 }
 
 .contact form {
-  background-color: #f0f0f0;
+  background-color: #131111;
   border-radius: 4px;
   border-top: 8px solid #E74C3C;
   box-shadow: 0 1px 2px rgba(0,0,0,.15);
   padding: 1em;
+}
+#contact {
+  background: #23648F;
 }
 
 .contact form input, .contact form textarea {
@@ -498,25 +501,6 @@ html,body {
   }
 }
 
-/* .footer {
-  background-color: #2C3E50;
-  color:  #fff;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.footer .container {
-  padding: 1em 0;
-}
-
-.footer a {
-  color: #fff;
-  margin-right: 1em;
-}
-
-.footer a:last-of-type {
-  margin-right: 0;
-} */
 
 /* ========================
 Media Queries
@@ -578,6 +562,15 @@ Media Queries
   }
   
   .gallery .gallery-image:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  #products-contianer {
+    float: left;
+    margin-right: 2.5%;
+    width: 31.6666666667%;
+  }
+  
+  #products-contianer:nth-of-type(3n) {
     margin-right: 0;
   }
   
